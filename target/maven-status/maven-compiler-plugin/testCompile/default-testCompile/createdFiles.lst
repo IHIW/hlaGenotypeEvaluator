@@ -1,0 +1,7 @@
+workshop/panel/OrganizeTypesBySampleFromGLStringTest.class
+workshop/panel/NoPhaseAmbiguityTest.class
+workshop/panel/CompareResultsTest.class
+workshop/panel/GenerateCompareResultsTableTest.class
+workshop/panel/ChooseElementForGLStringTest.class
+workshop/panel/PhaseAmbiguityTest.class
+workshop/panel/DecomposePhaseAmbiguityTest.class
