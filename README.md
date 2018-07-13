@@ -1,4 +1,5 @@
 # hlaGenotypeEvaluator
+<<<<<<< HEAD
 
 # Installation and Execution:
  - Install JDK (written for 1.8)
@@ -22,3 +23,5 @@
  - The third argument should be provided to specify outputfile
  
  
+=======
+>>>>>>> refs/remotes/origin/master
