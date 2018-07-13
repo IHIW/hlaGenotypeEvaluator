@@ -21,3 +21,4 @@
  - These files should be in the same format. The first column indicates "Sample ID", and the second column shows "GL String". These files should contain header in the first line.
  - The third argument should be provided to specify outputfile
  
+ 
