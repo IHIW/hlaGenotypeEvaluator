@@ -1,7 +1,7 @@
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/OrganizeTypesBySampleFromGLStringTest.java
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/DecomposePhaseAmbiguityTest.java
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/ChooseElementForGLStringTest.java
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/GenerateCompareResultsTableTest.java
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/PhaseAmbiguityTest.java
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/CompareResultsTest.java
-/Users/kazu/eclipse-workspace/hlaGenotypeEvaluator/src/test/java/workshop/panel/NoPhaseAmbiguityTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/NoPhaseAmbiguityTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/PhaseAmbiguityTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/ChooseElementForGLStringTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/DecomposePhaseAmbiguityTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/GenerateCompareResultsTableTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/OrganizeTypesBySampleFromGLStringTest.java
+/Users/kazu/git/hlaGenotypeEvaluator/src/test/java/workshop/panel/CompareResultsTest.java

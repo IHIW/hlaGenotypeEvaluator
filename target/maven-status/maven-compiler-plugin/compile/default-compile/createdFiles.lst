@@ -1,6 +1,7 @@
 workshop/panel/ambiguity/AmbiguityScore.class
 workshop/panel/ambiguity/DecomposePhaseAmbiguity.class
 workshop/panel/ambiguity/NoPhaseAmbiguity.class
+workshop/panel/driver/DriverForGenerateCompareResultsTable.class
 workshop/panel/CompareResults.class
 workshop/panel/glstring/ChooseElementForGLString.class
 workshop/panel/CompareType.class
