@@ -11,11 +11,12 @@ import workshop.panel.write.GenerateCompareResultsTable;
  *
  */
 public class GenerateCompareResultsTableTest extends TestCase {
-	public static final String SUPPLEMENTAL_TEST_FILE = "gl_string_consensus_PT.csv";
+	public static final String SUPPLEMENTAL_REF_FILE = "gl_string_consensus_PT.csv";
+	public static final String SUPPLEMENTAL_RESULT_FILE = "gl_strings_TEST.csv";
 	
 	public void testGenerateCompareResultsTable() {
 		
-		new GenerateCompareResultsTable(SUPPLEMENTAL_TEST_FILE, SUPPLEMENTAL_TEST_FILE, "TestResult.txt");
+		new GenerateCompareResultsTable(SUPPLEMENTAL_REF_FILE, SUPPLEMENTAL_RESULT_FILE, "TestResult.txt");
 	}
 
 }

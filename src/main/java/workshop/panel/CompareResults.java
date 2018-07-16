@@ -31,6 +31,7 @@ public class CompareResults {
 	// type
 	private Map<String, Map<String, Map<String, List<String>>>>scoreBySample;
 	private Set<String> locusSet;	// not all lab test all loci
+	private static final String [] category = {"Ref", "Result", "Score"};
 
 
 	/**
@@ -104,6 +105,10 @@ public class CompareResults {
 	public HLAgene getHLAgene() {
 		HLAgene hlaGene = new HLAgene();
 		return hlaGene;
+	}
+	
+	public String [] getCategory() {
+		return category;
 	}
 
 }

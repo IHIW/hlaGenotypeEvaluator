@@ -11,10 +11,11 @@ import junit.framework.TestCase;
  */
 public class CompareResultsTest extends TestCase {
 	public static final String SUPPLEMENTAL_TEST_FILE = "gl_string_consensus_PT.csv";
+	public static final String SUPPLEMENTAL_RESULT_FILE = "gl_strings_TEST.csv";
 	
 	public void testCompareResults() {
 
-		CompareResults cr = new CompareResults(SUPPLEMENTAL_TEST_FILE, SUPPLEMENTAL_TEST_FILE);
+		CompareResults cr = new CompareResults(SUPPLEMENTAL_TEST_FILE, SUPPLEMENTAL_RESULT_FILE);
 		
 		System.out.print("Sample\tCategory\t");
 		for (String locus : cr.getHLAgene().getGeneList()) {
@@ -22,11 +23,11 @@ public class CompareResultsTest extends TestCase {
 		}
 		System.out.println();
 		for (String sample : cr.getScoreBySample().keySet()) {
-			for (String score : cr.getScoreBySample().get(sample).keySet()) {
-				System.out.print(sample + "\t" + score + "\t");
+			for (String category : cr.getCategory()) {
+				System.out.print(sample + "\t" + category + "\t");
 				for (String locus : cr.getHLAgene().getGeneList()) {
-					if (cr.getScoreBySample().get(sample).get(score).containsKey(locus)) {
-						for (String type : cr.getScoreBySample().get(sample).get(score).get(locus)) {
+					if (cr.getScoreBySample().get(sample).get(category).containsKey(locus)) {
+						for (String type : cr.getScoreBySample().get(sample).get(category).get(locus)) {
 							System.out.print(type);
 						}
 					}

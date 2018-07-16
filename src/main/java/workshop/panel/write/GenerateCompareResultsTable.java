@@ -31,12 +31,12 @@ public class GenerateCompareResultsTable {
 				out.write(locus + "\t");
 			}
 			out.write("\n");
-			for (String sample : cr.getScoreBySample().keySet()) {
-				for (String score : cr.getScoreBySample().get(sample).keySet()) {
-					out.write(sample + "\t" + score + "\t");
+			for (String sample : cr.getScoreBySample().keySet()) {				
+				for (String category : cr.getCategory()) {
+					out.write(sample + "\t" + category + "\t");
 					for (String locus : cr.getHLAgene().getGeneList()) {
-						if (cr.getScoreBySample().get(sample).get(score).containsKey(locus)) {
-							for (String type : cr.getScoreBySample().get(sample).get(score).get(locus)) {
+						if (cr.getScoreBySample().get(sample).get(category).containsKey(locus)) {
+							for (String type : cr.getScoreBySample().get(sample).get(category).get(locus)) {
 								out.write(type);
 							}
 						}
