@@ -1,5 +1,5 @@
 # hlaGenotypeEvaluator
-<<<<<<< HEAD
+ - The software compares test HLA genotypes against reference HLA genotypes
 
 # Installation and Execution:
  - Install JDK (written for 1.8)
@@ -22,4 +22,11 @@
  - These files should be in the same format. The first column indicates "Sample ID", and the second column shows "GL String". These files should contain header in the first line.
  - The third argument should be provided to specify output file name. Date and ".csv" extension is added by the software
  
- 
+ # Scoring description in Results file
+ - Identical: HLA genotypes are exactly identical
+ - Concordance: Both Result and Ref are concordant at least by two field assessment
+ - AmbResultConcordant: Ambiguity reported in the Result but not in the Reference
+ - AmbRefConcordant: Ambiguity reported in the Reference
+ - AmbRefAmbResultConcordant: Ambiguity reported in the Reference and result
+ - UnresolvedNullAmbResultConcordant: Concordant, but Null allele was found in the result ambiguity string
+ - Discordant: Indicates both alleles do not match at all
