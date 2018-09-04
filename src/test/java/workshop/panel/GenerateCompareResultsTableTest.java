@@ -16,7 +16,7 @@ public class GenerateCompareResultsTableTest extends TestCase {
 	
 	public void testGenerateCompareResultsTable() {
 		
-		new GenerateCompareResultsTable(SUPPLEMENTAL_REF_FILE, SUPPLEMENTAL_RESULT_FILE, "TestResult.txt");
+		new GenerateCompareResultsTable(SUPPLEMENTAL_REF_FILE, SUPPLEMENTAL_RESULT_FILE, "TestResult.csv");
 	}
 
 }

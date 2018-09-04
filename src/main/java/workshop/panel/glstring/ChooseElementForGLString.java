@@ -1,5 +1,5 @@
 /**
- * 
+ * Input file requires header
  */
 package workshop.panel.glstring;
 

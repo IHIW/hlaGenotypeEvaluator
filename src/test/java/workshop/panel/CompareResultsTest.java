@@ -10,12 +10,12 @@ import junit.framework.TestCase;
  *
  */
 public class CompareResultsTest extends TestCase {
-	public static final String SUPPLEMENTAL_TEST_FILE = "gl_string_consensus_PT.csv";
+	public static final String SUPPLEMENTAL_REF_FILE = "gl_string_consensus_PT.csv";
 	public static final String SUPPLEMENTAL_RESULT_FILE = "gl_strings_TEST.csv";
 	
 	public void testCompareResults() {
 
-		CompareResults cr = new CompareResults(SUPPLEMENTAL_TEST_FILE, SUPPLEMENTAL_RESULT_FILE);
+		CompareResults cr = new CompareResults(SUPPLEMENTAL_REF_FILE, SUPPLEMENTAL_RESULT_FILE);
 		
 		System.out.print("Sample\tCategory\t");
 		for (String locus : cr.getHLAgene().getGeneList()) {

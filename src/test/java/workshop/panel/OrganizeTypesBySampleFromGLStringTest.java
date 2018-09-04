@@ -14,10 +14,10 @@ import workshop.panel.glstring.OrganizeTypesBySampleFromGLString;
  *
  */
 public class OrganizeTypesBySampleFromGLStringTest extends TestCase {
-	public static final String SUPPLEMENTAL_TEST_FILE = "gl_string_consensus_PT.csv";
+	public static final String SSUPPLEMENTAL_REF_FILE = "gl_string_consensus_PT.csv";
 	
 	public void testOrganizeTypesBySampleFromGLString() {
-		ChooseElement ce = new ChooseElementForGLString(SUPPLEMENTAL_TEST_FILE);
+		ChooseElement ce = new ChooseElementForGLString(SSUPPLEMENTAL_REF_FILE);
 		OrganizeBySample os = new OrganizeTypesBySampleFromGLString(ce);
 		for (String sample : os.getSampleList()) {
 			System.out.print(sample + "\t");

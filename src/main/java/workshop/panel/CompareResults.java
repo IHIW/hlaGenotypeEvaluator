@@ -1,5 +1,6 @@
 /**
  * This program was developed to compare results reference HLA typing vs. results from other lab
+ * Input file requires header
  */
 package workshop.panel;
 
@@ -43,54 +44,58 @@ public class CompareResults {
 		locusSet = new TreeSet<String>();
 				
 		ChooseElement refCe = new ChooseElementForGLString(refFile);
-//		OrganizeBySample refOs = new OrganizeTypesBySample(refCe);	// start from table
 		OrganizeBySample refOs = new OrganizeTypesBySampleFromGLString(refCe);	// start from glstring
 		
 		ChooseElement resultCe = new ChooseElementForGLString(resultFile);
 		OrganizeBySample resultOs = new OrganizeTypesBySampleFromGLString(resultCe);	
 		
 		for (String sample : resultOs.getSampleList()) {	// go through result sample list
-			// result sample are part of reference sample
-			Map<String, Map<String, List<String>>> diff = new HashMap<String, Map<String, List<String>>>();
-			Map<String, List<String>> tmpMap = new HashMap<String, List<String>>();
-			Map<String, List<String>> resultMap = new HashMap<String, List<String>>();
-			for (String locus : this.getHLAgene().getGeneList()) {		// go through gene	
-							
-				if (resultOs.getHlaTypeBySample().get(sample).containsKey(locus)) {
-					locusSet.add(locus);
-					List<String> tmpList = new ArrayList<String>();
-					List<String> resultList = new ArrayList<String>();
-//					System.out.println(sample);
-					if (refOs.getHlaTypeBySample().get(sample).containsKey(locus)) {
-						for (String refType : refOs.getHlaTypeBySample().get(sample).get(locus)) {	// go through refType
-							for (String resultType : resultOs.getHlaTypeBySample().get(sample).get(locus)) {	// go through result
-								// compare result vs ref types
-								CompareType ct = new CompareType(refType, resultType, locus);	// IMPORTANT LINE
-								if (ct.getScore().endsWith("+")) {
-									tmpList.add(ct.getScore().substring(0, ct.getScore().length() - 1));
-								}
-								else {
-									tmpList.add(ct.getScore());
-								}								
-								resultList.addAll(ct.getResultList());
-							}	
-						}
-					}							
-					tmpMap.put(locus, tmpList);	
-					resultMap.put(locus, resultList);
-				}
-				// No result, but ref present
-				else if (refOs.getHlaTypeBySample().get(sample).containsKey(locus)) {
-						List<String> tmpList = new ArrayList<String>();
-						tmpList.add("Discordant");
-						tmpMap.put(locus, tmpList);
-				}	
-							
+			if (!refOs.getHlaTypeBySample().containsKey(sample)) {
+				System.err.println(sample + " does not exist in the reference!!!");
 			}
-			diff.put("Ref", refOs.getHlaTypeBySample().get(sample));
-			diff.put("Result", resultMap);
-			diff.put("Score", tmpMap);
-			scoreBySample.put(sample, diff);			
+			else {
+				// result sample are part of reference sample
+				Map<String, Map<String, List<String>>> diff = new HashMap<String, Map<String, List<String>>>();
+				Map<String, List<String>> tmpMap = new HashMap<String, List<String>>();
+				Map<String, List<String>> resultMap = new HashMap<String, List<String>>();
+				for (String locus : this.getHLAgene().getGeneList()) {		// go through gene	
+								
+					if (resultOs.getHlaTypeBySample().get(sample).containsKey(locus)) {
+						locusSet.add(locus);
+						List<String> tmpList = new ArrayList<String>();
+						List<String> resultList = new ArrayList<String>();
+						
+						if (refOs.getHlaTypeBySample().get(sample).containsKey(locus)) {						
+							for (String refType : refOs.getHlaTypeBySample().get(sample).get(locus)) {	// go through refType
+								for (String resultType : resultOs.getHlaTypeBySample().get(sample).get(locus)) {	// go through result
+									// compare result vs ref types
+									CompareType ct = new CompareType(refType, resultType, locus);	// IMPORTANT LINE
+									if (ct.getScore().endsWith("+")) {
+										tmpList.add(ct.getScore().substring(0, ct.getScore().length() - 1));
+									}
+									else {
+										tmpList.add(ct.getScore());
+									}								
+									resultList.addAll(ct.getResultList());
+								}	
+							}
+						}							
+						tmpMap.put(locus, tmpList);	
+						resultMap.put(locus, resultList);
+					}
+					// No result, but ref present
+					else if (refOs.getHlaTypeBySample().get(sample).containsKey(locus)) {
+							List<String> tmpList = new ArrayList<String>();
+							tmpList.add("Discordant");
+							tmpMap.put(locus, tmpList);
+					}	
+								
+				}
+				diff.put("Ref", refOs.getHlaTypeBySample().get(sample));
+				diff.put("Result", resultMap);
+				diff.put("Score", tmpMap);
+				scoreBySample.put(sample, diff);
+			}						
 		}		
 	}
 	
