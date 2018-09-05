@@ -23,6 +23,7 @@
  - These files should be in the same format. The first column indicates "Sample ID", and the second column shows "GL String". These files should contain header in the first line
  - The third argument should be provided to specify output file name. Date and ".csv" extension is added by the software
  
+ 
  2. driverForRunValidation.sh &lt;baseDirectory>
  - Input files can be Histoimmunogenetics Markup Language (HML: https://bioinformatics.bethematchclinical.org/hla-resources/hml/) or csv file format. See above description about csv file format. The file extension of HML can be either ".xml" or ".hml". 
  - The HML report output can be generated using commercially available NGS HLA genotyping software, such as MiaFora (Immucor), TypeStream Visual (One Lambda) or HLA Twin (Omixon)
