@@ -1,7 +1,7 @@
 /**
  * Validate alleles, capture illega alleles
  */
-package workshop.panle.hml;
+package workshop.panel.hml;
 
 /**
  * @author kazu

@@ -6,7 +6,7 @@ package workshop.panel;
 import org.junit.Test;
 
 import junit.framework.TestCase;
-import workshop.panle.hml.StaxProjectHMLReader;
+import workshop.panel.hml.StaxProjectHMLReader;
 
 /**
  * @author kazu

@@ -1,7 +1,7 @@
 /**
  * This exception class object is thrown when an illegal allele is found
  */
-package workshop.panle.hml;
+package workshop.panel.hml;
 
 /**
  * @author kazu

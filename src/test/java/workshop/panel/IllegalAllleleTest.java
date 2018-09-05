@@ -6,7 +6,7 @@ package workshop.panel;
 import org.junit.Test;
 
 import junit.framework.TestCase;
-import workshop.panle.hml.IllegalAllele;
+import workshop.panel.hml.IllegalAllele;
 
 /**
  * @author kazu

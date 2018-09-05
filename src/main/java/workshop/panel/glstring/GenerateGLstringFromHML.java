@@ -7,7 +7,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import workshop.panle.hml.ProjectSampleType;
+import workshop.panel.hml.ProjectSampleType;
+
 
 /**
  * @author kazu

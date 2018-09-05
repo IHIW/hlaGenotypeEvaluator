@@ -2,7 +2,7 @@
  * This the second layer above StaxProjectHMLReader
  * allele validation step was added on May 3 2017
  */
-package workshop.panle.hml;
+package workshop.panel.hml;
 
 import java.util.ArrayList;
 import java.util.HashMap;

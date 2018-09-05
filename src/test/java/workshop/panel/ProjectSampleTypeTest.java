@@ -4,7 +4,7 @@
 package workshop.panel;
 
 import junit.framework.TestCase;
-import workshop.panle.hml.ProjectSampleType;
+import workshop.panel.hml.ProjectSampleType;
 
 import org.junit.Test;
 

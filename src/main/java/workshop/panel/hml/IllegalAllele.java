@@ -1,7 +1,7 @@
 /**
  * List of illegal alleles from MiaFora software
  */
-package workshop.panle.hml;
+package workshop.panel.hml;
 
 import java.util.ArrayList;
 import java.util.HashMap;

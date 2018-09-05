@@ -3,7 +3,7 @@
  * This is the base class
  * This class is inherited by SironaProjectSampleType class
  */
-package workshop.panle.hml;
+package workshop.panel.hml;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
