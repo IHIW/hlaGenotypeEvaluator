@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+    Histoimmunogenetics Markup Language (HML)
+    Copyright (c) 2014 National Marrow Donor Program (NMDP)
+
+    This specification is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as published
+    by the Free Software Foundation; either version 3 of the License, or (at
+    your option) any later version.
+
+    This specification is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; with out even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+    License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this specification;  if not, write to the Free Software Foundation,
+    Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA.
+
+    > http://www.gnu.org/licenses/lgpl.html
+
+-->
+<hml xmlns="http://schemas.nmdp.org/spec/hml/1.0.1" xmlns:hml="http://schemas.nmdp.org/spec/hml/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.nmdp.org/spec/hml/1.0.1  http://schemas.nmdp.org/spec/hml/1.0.1/hml-1.0.1.xsd" version="1.0.1">
+
+<sample id="Sample2">
+      <glstring>HLA-A*02:01:01:01+HLA-A*33:01:01:01</glstring>
+      <glstring>HLA-B*07:02:01:01+HLA-B*14:02:01:01</glstring>
+      <glstring>HLA-C*07:02:01:03+HLA-C*08:02:01:01</glstring>
+      <glstring>HLA-DPA1*02:06+HLA-DPA1*01:03:01:04</glstring>
+      <glstring>HLA-DQA1*01:02:01:05+HLA-DQA1*01:01:02</glstring>
+      <glstring>HLA-DQB1*06:02:01:01+HLA-DQB1*05:01:01:01</glstring>
+      <glstring>HLA-DRB1*15:01:01:01+HLA-DRB1*01:02:01|HLA-DRB1*15:01:01:02+HLA-DRB1*01:02:01|HLA-DRB1*15:01:01:03+HLA-DRB1*01:02:01</glstring>
+      <glstring>HLA-DRB5*01:01:01</glstring>
+</sample>
+<sample id="Sample3">
+      <glstring>HLA-A*24:02:01:01</glstring>
+      <glstring>HLA-B*52:01:01:03+HLA-B*35:02:01:02</glstring>
+      <glstring>HLA-C*12:02:02:01+HLA-C*04:01:01:06</glstring>
+      <glstring>HLA-DPA1*01:03:01:01+HLA-DPA1*01:03:01:02</glstring>
+      <glstring>HLA-DPB1*104:01:01:01+HLA-DPB1*414:01:01:02</glstring>
+      <glstring>HLA-DQA1*01:03:01:01+HLA-DQA1*05:05:01:01</glstring>
+      <glstring>HLA-DQB1*06:01:01+HLA-DQB1*03:01:01:02</glstring>
+      <glstring>HLA-DRB1*15:02:01:03+HLA-DRB1*11:04:01</glstring>
+      <glstring>HLA-DRB5*01:02^HLA-DRB3*02:02:01:02</glstring>
+</sample>
+<sample id="Sample4">
+      <glstring>HLA-A*01:01:01:01+HLA-A*24:02:01:01</glstring>
+      <glstring>HLA-B*08:01:01:01+HLA-B*35:01:01:05</glstring>
+      <glstring>HLA-C*07:01:01:01+HLA-C*04:01:01:05</glstring>
+      <glstring>HLA-DPA1*01:03:01:01</glstring>
+      <glstring>HLA-DPB1*02:01:02:05</glstring>
+      <glstring>HLA-DQA1*05:01:01:02+HLA-DQA1*01:01:01:05</glstring>
+      <glstring>HLA-DQB1*02:01:01+HLA-DQB1*05:01:01:03</glstring>
+      <glstring>HLA-DRB1*03:01:01:01+HLA-DRB1*01:03:01</glstring>
+      <glstring>HLA-DRB3*01:01:02:01</glstring>
+</sample>
+</hml>

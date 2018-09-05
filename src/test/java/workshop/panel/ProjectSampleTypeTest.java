@@ -13,7 +13,7 @@ import org.junit.Test;
  *
  */
 public class ProjectSampleTypeTest extends TestCase {
-	public static final String HML_REF_FILE = "src/test/resources/NGS564_14Aug18_SHOVELER.xml";
+	public static final String HML_REF_FILE = "src/test/resources/reference.xml";
 
 	@Test
 	public void test() {
@@ -32,7 +32,7 @@ public class ProjectSampleTypeTest extends TestCase {
 			}
 			glstring = glstring.substring(0, glstring.length() - 1);
 			System.out.println(glstring);
-		} 
+		}
 	}
 
 }

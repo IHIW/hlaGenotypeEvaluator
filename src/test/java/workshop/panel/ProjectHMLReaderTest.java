@@ -14,7 +14,7 @@ import workshop.panle.hml.StaxProjectHMLReader;
  */
 public class ProjectHMLReaderTest extends TestCase {
 	
-	public static final String HML_TEST_FILE = "src/test/resources/ONL14083118.xml";
+	public static final String HML_TEST_FILE = "src/test/resources/test.xml";
 	
 	@Test
 	public void testStaxProjectHMLReader() {

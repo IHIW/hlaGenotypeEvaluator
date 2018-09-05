@@ -1,5 +1,5 @@
 /**
- * 
+ * this class is able to take xml/hml or csv as file input format
  */
 package workshop.panel.write;
 
@@ -10,6 +10,7 @@ import workshop.panel.write.GenerateCompareResultsTable;
 
 /**
  * @author kazu
+ * @version September 4 2018
  *
  */
 public class GenerateValidationScore {
@@ -22,7 +23,9 @@ public class GenerateValidationScore {
 		
 		String refcsv = "referenceGLstring.csv";
 		File refFile = new File(ref);
-		if ((refFile.getName().contains("xml")) || (refFile.getName().contains("hml"))) {
+		// if file extension is xml or hml
+		if ((refFile.getName().contains(".xml")) || (refFile.getName().contains(".hml")) ||
+				(refFile.getName().contains(".XML")) || (refFile.getName().contains(".HML"))) {
 			new GenerateGLstringFromHML(ref, refcsv);
 		}
 		else {
@@ -31,7 +34,8 @@ public class GenerateValidationScore {
 		
 		String resultcsv = "resultGLstring.csv";
 		File resultFile = new File(result);
-		if ((resultFile.getName().contains("xml")) || (resultFile.getName().contains("hml"))) {
+		if ((resultFile.getName().contains(".xml")) || (resultFile.getName().contains(".hml")) ||
+				(resultFile.getName().contains(".XML")) || (resultFile.getName().contains(".HML"))) {
 			new GenerateGLstringFromHML(result, resultcsv);
 		}
 		else {
