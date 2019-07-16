@@ -24,9 +24,17 @@
     <!--the following dependency was manually added-->
     <dependency>
       <groupId>workshop.haplotype</groupId>
-      <artifactId>haplObserve</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <artifactId>hapl-obs</artifactId>
       <scope>compile</scope>
     </dependency>
   </dependencies>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>workshop.haplotype</groupId>
+  			<artifactId>hapl-obs</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>

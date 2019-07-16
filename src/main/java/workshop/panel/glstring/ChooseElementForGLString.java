@@ -3,6 +3,7 @@
  */
 package workshop.panel.glstring;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import workshop.haplotype.organize.file.removeLine.RemoveLine;
 
 /**
  * @author kazutoyo
- * @December 18 2015
+ * @version July 16 2019
  *
  */
 public class ChooseElementForGLString extends ChooseElement {
@@ -22,11 +23,13 @@ public class ChooseElementForGLString extends ChooseElement {
 	/**
 	 * @param filePath
 	 */
-	public ChooseElementForGLString(String filePath) {
-		super(filePath);
+//	public ChooseElementForGLString(String filePath) {
+	public ChooseElementForGLString(BufferedReader reader) {
+//		super(filePath);
+		super();
 		// TODO Auto-generated constructor stub
 		removedList  = new ArrayList<String>();
-		RemoveLine rel = new RemoveFirstLine(filePath);	// requires header
+		RemoveLine rel = new RemoveFirstLine(reader);	// requires header
 		removedList.addAll(rel.getRemovedList());
 		OrganizeElement oe = new OrganizeElement(rel, ",");
 		chooseElement(oe);

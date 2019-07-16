@@ -15,6 +15,7 @@ import java.util.TreeSet;
 import workshop.haplotype.family.organize.OrganizeBySample;
 import workshop.haplotype.gene.HLAgene;
 import workshop.haplotype.organize.file.ChooseElement;
+import workshop.haplotype.utilities.FileUtilities;
 import workshop.panel.glstring.ChooseElementForGLString;
 import workshop.panel.glstring.OrganizeTypesBySampleFromGLString;
 
@@ -43,10 +44,10 @@ public class CompareResults {
 		scoreBySample = new TreeMap<String, Map<String, Map<String, List<String>>>>();
 		locusSet = new TreeSet<String>();
 				
-		ChooseElement refCe = new ChooseElementForGLString(refFile);
+		ChooseElement refCe = new ChooseElementForGLString(FileUtilities.readFile(refFile));
 		OrganizeBySample refOs = new OrganizeTypesBySampleFromGLString(refCe);	// start from glstring
 		
-		ChooseElement resultCe = new ChooseElementForGLString(resultFile);
+		ChooseElement resultCe = new ChooseElementForGLString(FileUtilities.readFile(resultFile));
 		OrganizeBySample resultOs = new OrganizeTypesBySampleFromGLString(resultCe);	
 		
 		for (String sample : resultOs.getSampleList()) {	// go through result sample list

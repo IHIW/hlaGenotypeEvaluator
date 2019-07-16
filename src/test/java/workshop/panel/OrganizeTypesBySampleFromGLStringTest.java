@@ -6,6 +6,7 @@ package workshop.panel;
 import junit.framework.TestCase;
 import workshop.haplotype.family.organize.OrganizeBySample;
 import workshop.haplotype.organize.file.ChooseElement;
+import workshop.haplotype.utilities.FileUtilities;
 import workshop.panel.glstring.ChooseElementForGLString;
 import workshop.panel.glstring.OrganizeTypesBySampleFromGLString;
 
@@ -14,10 +15,10 @@ import workshop.panel.glstring.OrganizeTypesBySampleFromGLString;
  *
  */
 public class OrganizeTypesBySampleFromGLStringTest extends TestCase {
-	public static final String SSUPPLEMENTAL_REF_FILE = "gl_string_consensus_PT.csv";
+	public static final String SUPPLEMENTAL_REF_FILE = "gl_string_consensus_PT.csv";
 	
 	public void testOrganizeTypesBySampleFromGLString() {
-		ChooseElement ce = new ChooseElementForGLString(SSUPPLEMENTAL_REF_FILE);
+		ChooseElement ce = new ChooseElementForGLString(FileUtilities.readFile(SUPPLEMENTAL_REF_FILE));
 		OrganizeBySample os = new OrganizeTypesBySampleFromGLString(ce);
 		for (String sample : os.getSampleList()) {
 			System.out.print(sample + "\t");
