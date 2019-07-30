@@ -1,0 +1,40 @@
+language:  java
+
+cache:
+  directories:
+  - "$HOME/.m2"
+
+jobs:
+  include:
+    - stage: test
+      jdk: openjdk8
+      before_install:
+        - curl -L -o hapl-obs.jar $HAPL_OBS_URL
+        - mvn install:install-file -Dfile=hapl-obs.jar -Dpackaging=jar -DgroupId=workshop.haplotype -DartifactId=hapl-obs -Dversion=$HAPL_OBS_VERSION 
+
+    - jdk: openjdk11
+      before_install:
+        - curl -L -o hapl-obs.jar $HAPL_OBS_URL
+        - mvn install:install-file -Dfile=hapl-obs.jar -Dpackaging=jar -DgroupId=workshop.haplotype -DartifactId=hapl-obs -Dversion=$HAPL_OBS_VERSION 
+
+    - stage: deploy
+      if: tag IS present
+      jdk: openjdk11
+      install: skip
+      script: skip
+      if: tag IS present
+      before_deploy:
+        - mvn clean
+        - sed -i "s|<version>0.0.1-SNAPSHOT</version>|<version>${TRAVIS_TAG}</version>|" pom.xml
+        - mvn package -Dmaven.test.skip=true
+
+      deploy:
+        provider: releases
+        api_key: $GITHUB_OAUTH_TOKEN
+        skip_cleanup: true
+        file_glob: true
+        file:
+          - "target/*.jar"
+        on:
+          tags: true
+          all_branches: true
