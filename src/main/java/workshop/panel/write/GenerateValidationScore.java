@@ -44,10 +44,12 @@ public class GenerateValidationScore {
 		
 		new GenerateCompareResultsTable(refcsv, resultcsv, scoreOutput);
 		// added here to remove generated files on September 18 2019
-		if (!refFile.delete()) {
+		File refCsvFile = new File(refcsv);
+		if (!refCsvFile.delete()) {
 			System.err.println("Could not delete " + refcsv);
 		}
-		if (!resultFile.delete()) {
+		File resultCsvFile = new File(resultcsv);
+		if (!resultCsvFile.delete()) {
 			System.err.println("Could not delete " + resultcsv);
 		}
 	}
