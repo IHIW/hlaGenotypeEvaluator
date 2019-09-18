@@ -7,6 +7,11 @@
   
  - Download and Install Java SE Development Kit (JDK - 1.8 or newer)
  
+ - Download jar file (https://github.com/kosoegawa/hlaGenotypeEvaluator/releases/download/v1.0.0/hlaGenotypeEvaluator-0.0.1-SNAPSHOT-jar-with-dependencies.jar)
+ 
+ - Download directly on a computer with this command:
+ - curl -LO https://github.com/kosoegawa/hlaGenotypeEvaluator/releases/download/v1.0.0/hlaGenotypeEvaluator-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+ 
 
 # Input files
  1. Input files can be Histoimmunogenetics Markup Language (HML: https://bioinformatics.bethematchclinical.org/hla-resources/hml/) or csv file format.
@@ -14,7 +19,7 @@
  - The HML report can be generated using commercially available NGS HLA genotyping software, such as MiaFora (Immucor), TypeStream Visual (One Lambda) or HLA Twin (Omixon)
  - The reference HML contains "reference" report, and test HML includes test report
  - The software takes &lt;baseDirectory> as an argument. The &lt;baseDirectory> name can be anything, such as validation, but do not use space in &lt;baseDirectory> name.
- - HML files must be stored in "ref" and "test" directories.The software requires the following directory and file structures:
+ - HML files must be stored in "ref" and "test" directories. The software requires the following directory and file structures:
  - “&lt;baseDirectory>/ref/XXX.xml”, “&lt;baseDirectory>/ref/XXX.hml” or “&lt;baseDirectory>/ref/XXX.csv”
  - Input reference file (XXX) should be stored in “ref” directory, and "ref" directory name must be used.
  - “&lt;baseDirectory>/test/YYY.xml”, “&lt;baseDirectory>/test/YYY.hml” or “&lt;baseDirectory>/test/YYY.csv”
@@ -50,3 +55,7 @@
  - AmbRefAmbResultConcordant: Ambiguity reported in the Reference and Test
  - UnresolvedNullAmbResultConcordant: Concordant, but Null allele was found in the Test ambiguity string
  - Discordant: Indicates both alleles do not match at all
+
+ # Reference
+ Quality control project of NGS HLA genotyping for the 17th International HLA and Immunogenetics Workshop
+ [https://www.ncbi.nlm.nih.gov/pubmed/30738112]
