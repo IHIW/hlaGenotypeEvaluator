@@ -9,7 +9,7 @@
  
  - Download jar file (https://github.com/kosoegawa/hlaGenotypeEvaluator/releases/download/v1.0.0/hlaGenotypeEvaluator-0.0.1-SNAPSHOT-jar-with-dependencies.jar)
  
- - Download directly on a computer with this command:
+ - alternatively, download can be made directly on a computer with this command:
  - curl -LO https://github.com/kosoegawa/hlaGenotypeEvaluator/releases/download/v1.0.0/hlaGenotypeEvaluator-0.0.1-SNAPSHOT-jar-with-dependencies.jar
  
 
