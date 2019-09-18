@@ -33,7 +33,7 @@
   		<dependency>
   			<groupId>workshop.haplotype</groupId>
   			<artifactId>hapl-obs</artifactId>
- 			<version>0.2</version>
+ 			<version>0.0.1-SNAPSHOT</version>
   		</dependency>
   	</dependencies>
   </dependencyManagement>
@@ -57,7 +57,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>workshop.panel.driver.DriverForRunValidation</mainClass>
+							<mainClass>workshop.panel.driver.DriverSelect</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

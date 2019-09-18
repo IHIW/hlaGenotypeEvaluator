@@ -10,7 +10,7 @@ import workshop.panel.write.GenerateCompareResultsTable;
 
 /**
  * @author kazu
- * @version September 4 2018
+ * @version September 18 2019
  *
  */
 public class GenerateValidationScore {
@@ -43,6 +43,13 @@ public class GenerateValidationScore {
 		}
 		
 		new GenerateCompareResultsTable(refcsv, resultcsv, scoreOutput);
+		// added here to remove generated files on September 18 2019
+		if (!refFile.delete()) {
+			System.err.println("Could not delete " + refcsv);
+		}
+		if (!resultFile.delete()) {
+			System.err.println("Could not delete " + resultcsv);
+		}
 	}
 
 }
