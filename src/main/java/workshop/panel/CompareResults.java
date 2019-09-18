@@ -1,6 +1,8 @@
 /**
- * This program was developed to compare results reference HLA typing vs. results from other lab
+ * This program was developed to compare results reference HLA typing vs. test from other lab
  * Input file requires header
+ * 
+ * modified "result" to "test"
  */
 package workshop.panel;
 
@@ -23,17 +25,17 @@ import workshop.panel.glstring.OrganizeTypesBySampleFromGLString;
 
 /**
  * @author kazu
- * @version January 19 2017
+ * @version September 18 2019
  *
  */
 public class CompareResults {
 	// sample ID
-	// ref, result, score
+	// ref, test, score
 	// locus
 	// type
 	private Map<String, Map<String, Map<String, List<String>>>>scoreBySample;
 	private Set<String> locusSet;	// not all lab test all loci
-	private static final String [] category = {"Ref", "Result", "Score"};
+	private static final String [] category = {"Ref", "Test", "Score"};
 
 
 	/**
@@ -50,7 +52,7 @@ public class CompareResults {
 		ChooseElement resultCe = new ChooseElementForGLString(FileUtilities.readFile(resultFile));
 		OrganizeBySample resultOs = new OrganizeTypesBySampleFromGLString(resultCe);	
 		
-		for (String sample : resultOs.getSampleList()) {	// go through result sample list
+		for (String sample : resultOs.getSampleList()) {	// go through test sample list
 			if (!refOs.getHlaTypeBySample().containsKey(sample)) {
 				System.err.println(sample + " does not exist in the reference!!!");
 			}
@@ -93,7 +95,7 @@ public class CompareResults {
 								
 				}
 				diff.put("Ref", refOs.getHlaTypeBySample().get(sample));
-				diff.put("Result", resultMap);
+				diff.put("Test", resultMap);
 				diff.put("Score", tmpMap);
 				scoreBySample.put(sample, diff);
 			}						
