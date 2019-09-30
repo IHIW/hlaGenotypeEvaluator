@@ -7,10 +7,10 @@
   
  - Download and Install Java SE Development Kit (JDK - 1.8 or newer)
  
- - Download jar file (https://github.com/kosoegawa/hlaGenotypeEvaluator/releases/download/v1.0.0/hlaGenotypeEvaluator-0.0.1-SNAPSHOT-jar-with-dependencies.jar)
+ - Download the latest version of jar file from the release
  
- - alternatively, download can be made directly on a computer with this command:
- - curl -LO https://github.com/kosoegawa/hlaGenotypeEvaluator/releases/download/v1.0.0/hlaGenotypeEvaluator-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+ - alternatively, download of the jar file can be made directly on a computer with this command:
+ - curl -LO "link to the released jar file"
  
 
 # Input files
